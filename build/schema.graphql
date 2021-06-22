@@ -1,0 +1,11 @@
+type Punk @entity {
+  id: ID!
+  owner: Account!
+  totalOwners: BigInt!
+}
+
+type Account @entity {
+  id: ID! 
+  totalPunks: BigInt!
+  punks: [Punk]! @derivedFrom(field: "owner")
+}
