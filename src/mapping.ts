@@ -1,5 +1,10 @@
 import { Address, BigInt } from "@graphprotocol/graph-ts"
-import { Account } from "../generated/schema"
+import { Account, Punk } from "../generated/schema"
+import {
+  Assign,
+  PunkTransfer,
+  PunkBought
+} from "../generated/Contract/Contract"
 
 export function getAccount(address: Address): Account {
 
