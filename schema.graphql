@@ -1,6 +1,11 @@
-type Gravatar @entity {
+type Punk @entity {
   id: ID!
-  owner: Bytes!
-  displayName: String!
-  imageUrl: String!
+  owner: Account!
+  totalOwners: BigInt!
+}
+
+type Account @entity {
+  id: ID! 
+  totalPunks: BigInt!
+  punks: [Punk]! @derivedFrom(field: "owner")
 }
