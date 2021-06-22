@@ -1,6 +1,7 @@
 {
   "name": "profile",
   "license": "MIT",
+  "repository": "https://github.com/cybertino/profile-subgraph",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
